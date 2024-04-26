@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+
+</head>
+<body>
+        {% for post in user_posts %}
+    <div>
+         <a href="{% url 'delete-post' post.id %}">Delete</a>
+        <h1>{{post.title}}</h1>
+
+            <p>{{post.content}}</p>
+    </div>
+        {% endfor %}
+</body>
+</html>
